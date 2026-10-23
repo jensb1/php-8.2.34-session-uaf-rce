@@ -1,0 +1,6 @@
+*.so
+sess_*
+__pycache__/
+*.pyc
+*.log
+builds/
